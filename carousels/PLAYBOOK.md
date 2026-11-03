@@ -45,6 +45,20 @@ Rotate the 10 pillars inside these 3 slots. Once a week, slot 2 can be Dr. Azka'
 - **Default:** one-word / one-number question ("Which leak is biggest in your clinic? 1–5").
 - **Keyword lead magnet (Daria-style):** only once a real resource exists (e.g. the after-hours reply template, the patient-leak checklist). Use one keyword consistently.
 
-## 6. Structure devices to rotate
+## 6. Daily workflow (locked)
+1. Claude sends 3 scripts: Content + Clinic Branding + Patient Leak/AI.
+2. Dr. Azka and Claude improve them line by line.
+3. On approval, Claude designs them in the purple style (1080×1350).
+4. Claude sends every slide as a separate picture, in posting order.
+5. Files saved in `carousels/YYYY-MM-DD-cN/` and pushed to the repo.
+
+Quality bar for every carousel:
+- Slide 1 stops a clinic owner: number, scene, contrarian or "X vs Y".
+- Each value slide = headline + one device + punch line.
+- At least one copy-paste template (reply, hook, script line) per carousel.
+- One clear idea per carousel, tied back to the patient journey.
+- Final check: would a dermatologist screenshot this and send it to her team?
+
+## 7. Structure devices to rotate
 ✗/✓ rewrites · Instead of → Try table · two-column "most clinics vs booked clinics" · numbered rows ·
 journey map with leak points · illustrative bar chart · equation · chat-bubble mock-up · checklist · recap "start here".

@@ -4,6 +4,20 @@ Built 3 Nov 2026 from 8 reference carousels (5 × @dariamedric, 3 × @thecontent
 plus Dr. Azka's own brief, November plan and positioning files.
 Use it for the 3 daily carousels. Learn the patterns, never copy their topics or wording.
 
+## 0. The goal every carousel serves
+**3–5 paying clinic clients (pilot or low-ticket) from the UAE + USA by 31 Dec 2026.**
+Every carousel must move a clinic owner one step: notice → trust → DM → audit → pilot call → client.
+
+Conversion path:
+- Carousel → comment (question CTA) or DM keyword **AUDIT**
+- AUDIT = free Patient-Leak Audit: Azka tests the clinic like a patient (9 PM DM, price question, missed call) and sends a short report.
+- Audit report → 15-min call → 60-day pilot.
+
+Planning targets (not promises): ~40 qualified DM conversations → ~15 audits/calls → 3–5 pilots.
+
+Weekly mix (21 carousels): 7 Content (reach), 7 Branding/Authority (trust), 7 Leak/AI (conversion, AUDIT CTA).
+At least 2/week are proof posts built from REAL audit findings (never invented).
+
 ## 1. What the references do well
 
 | Pattern | Where seen | Why it works |

@@ -56,6 +56,8 @@ Rotate the 10 pillars inside these 3 slots. Once a week, slot 2 can be Dr. Azka'
 - No guarantees, no real patient data, never "ask only happy patients for reviews".
 
 ## 5. CTA options
+- **Never** "tell me below" / "comment below" — doctors won't type. Use: a one-tap question + a complimentary expert offer,
+  e.g. "DM me, and I'll turn them into your 7-day content plan."
 - **Default:** one-word / one-number question ("Which leak is biggest in your clinic? 1–5").
 - **Keyword lead magnet (Daria-style):** only once a real resource exists (e.g. the after-hours reply template, the patient-leak checklist). Use one keyword consistently.
 

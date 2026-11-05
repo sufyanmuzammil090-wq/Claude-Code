@@ -18,6 +18,12 @@ Planning targets (not promises): ~40 qualified DM conversations → ~15 audits/c
 Weekly mix (21 carousels): 7 Content (reach), 7 Branding/Authority (trust), 7 Leak/AI (conversion, AUDIT CTA).
 At least 2/week are proof posts built from REAL audit findings (never invented).
 
+## 0b. Concepts to include (add, never replace existing topics)
+- **The 2 types of branding in healthcare** (added 5 Nov): if you own a clinic or practise privately, you need
+  (1) **personal branding** as a doctor and (2) **clinic branding** around your specialists.
+  Frame it positively for practice owners. Never say "I don't recommend it for hospital doctors"; just address owners/private practice.
+  Use it in an upcoming Clinic Branding slot (first candidate: Day 2), or as a slide inside a branding carousel.
+
 ## 1. What the references do well
 
 | Pattern | Where seen | Why it works |

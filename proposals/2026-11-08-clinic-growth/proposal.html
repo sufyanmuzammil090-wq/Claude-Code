@@ -1,0 +1,195 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Doctor-Led Clinic Growth — Proposal</title>
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:"Inter",sans-serif;color:#1e0b4a;background:#888}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;
+ background:radial-gradient(circle at 96% 4%,#c9b8f7 0,rgba(201,184,247,.55) 16%,rgba(255,255,255,0) 38%),
+ radial-gradient(circle at 0% 100%,#dccff9 0,rgba(220,207,249,0) 32%),
+ linear-gradient(180deg,#fff 0%,#f7f3ff 55%,#efe7fe 100%)}
+.page:last-child{page-break-after:auto}
+.top{position:absolute;left:46px;right:46px;top:34px;display:flex;justify-content:space-between;align-items:center}
+.brand{font:700 13px "DejaVu Sans";letter-spacing:3px;color:#5b21b6}
+.count{background:#fff;border-radius:20px;padding:5px 14px;font:700 11px "DejaVu Sans";letter-spacing:2px;color:#5b21b6;box-shadow:0 4px 12px rgba(124,58,237,.10)}
+.content{position:absolute;left:46px;right:46px;top:82px}
+.foot{position:absolute;left:46px;right:46px;bottom:26px;display:flex;justify-content:space-between;font:600 9.5px "Inter";letter-spacing:1.5px;color:#8a7bb5;text-transform:uppercase}
+.cond{display:inline-block;white-space:nowrap;transform:scaleX(.74);transform-origin:left top}
+h1{font:700 54px/1.02 "DejaVu Serif";letter-spacing:-1.5px;text-transform:uppercase;color:#1e0b4a}
+h2{font:700 30px/1.1 "DejaVu Serif";letter-spacing:-.5px;text-transform:uppercase;color:#1e0b4a;margin-bottom:4px}
+.hl{background:linear-gradient(90deg,#cdbdfb,#ece5ff);padding:0 8px;margin:0 -8px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.kicker{font:700 10.5px "DejaVu Sans";letter-spacing:2.5px;color:#7c3aed;text-transform:uppercase;margin-bottom:6px}
+.pill{display:inline-block;background:linear-gradient(90deg,#8b5cf6,#5b21b6);color:#fff;font:700 10.5px "DejaVu Sans";letter-spacing:2.5px;padding:7px 15px;border-radius:20px;box-shadow:0 6px 14px rgba(91,33,182,.25)}
+p{font:400 12px/1.52 "Inter";color:#3b2a66}
+p strong,li strong{color:#1e0b4a;font-weight:700}
+.lead{font:500 15px/1.55 "Inter";color:#2a1758}
+.bar{background:linear-gradient(90deg,#8b5cf6,#5b21b6);color:#fff;border-radius:40px;padding:15px 30px;text-align:center;font:700 17px/1.35 "DejaVu Serif";box-shadow:0 14px 30px rgba(91,33,182,.25)}
+.card{background:#fff;border-radius:20px;box-shadow:0 12px 30px rgba(124,58,237,.12);padding:16px 18px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.num{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#5b21b6);color:#fff;font:700 13px "DejaVu Sans";display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.card h3{font:700 15px/1.25 "DejaVu Serif";color:#1e0b4a;margin-bottom:6px}
+.card .why{margin-top:10px;padding-top:9px;border-top:1.5px solid #f0eafc;font:600 11px/1.5 "Inter";color:#6d28d9}
+.punch{font:700 16px/1.35 "DejaVu Serif";color:#1e0b4a;border-left:5px solid #7c3aed;padding:3px 0 3px 14px}
+.sec{margin-top:22px}
+/* systems */
+.sys{display:grid;grid-template-columns:200px 1fr;gap:0;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 26px rgba(124,58,237,.12);margin-top:16px}
+.sys .leak{padding:16px 18px;background:#fff;border-right:1.5px solid #f0eafc}
+.sys .leak .l{font:700 9px "DejaVu Sans";letter-spacing:2px;color:#c0392b;text-transform:uppercase}
+.sys .leak .t{font:700 14px/1.25 "DejaVu Serif";margin-top:4px}
+.sys .fix{padding:16px 20px;background:linear-gradient(90deg,#8b5cf6,#5b21b6);color:#fff}
+.sys .fix .l{font:700 9px "DejaVu Sans";letter-spacing:2px;color:#e3d8ff;text-transform:uppercase}
+.sys .fix .t{font:700 14px/1.25 "DejaVu Serif";margin-top:3px}
+.sys .fix p{color:#efe8ff;font-size:11.8px;line-height:1.5;margin-top:3px}
+.chips{display:flex;gap:6px;margin-top:7px}
+.chip{background:#fff;color:#5b21b6;border-radius:10px;padding:3px 10px;font:700 10px "DejaVu Sans";letter-spacing:1px}
+.chip.ghost{background:rgba(255,255,255,.18);color:#fff}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px;position:relative}
+.step{background:#fff;border-radius:18px;padding:16px 14px;box-shadow:0 10px 24px rgba(124,58,237,.12);position:relative}
+.step .s{font:700 9.5px "DejaVu Sans";letter-spacing:2px;color:#7c3aed}
+.step h4{font:700 13.5px/1.25 "DejaVu Serif";margin:5px 0 5px}
+.step p{font-size:10.8px;line-height:1.5}
+.step.hot{background:linear-gradient(135deg,#8b5cf6,#5b21b6)}
+.step.hot .s{color:#e3d8ff}.step.hot h4{color:#fff}.step.hot p{color:#efe8ff}
+ul.ticks{list-style:none;margin-top:8px}
+ul.ticks li{font:400 11.8px/1.55 "Inter";color:#3b2a66;padding-left:22px;position:relative;margin-bottom:7px}
+ul.ticks li:before{content:"";position:absolute;left:0;top:4px;width:13px;height:13px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#5b21b6)}
+ul.ticks li:after{content:"";position:absolute;left:4px;top:7px;width:4px;height:6px;border:solid #fff;border-width:0 1.6px 1.6px 0;transform:rotate(45deg)}
+.cta{background:linear-gradient(120deg,#8b5cf6,#5b21b6);color:#fff;border-radius:26px;padding:26px 30px;box-shadow:0 16px 34px rgba(91,33,182,.28);display:grid;grid-template-columns:1.25fr 1fr;gap:24px;align-items:center}
+.cta h3{font:700 22px/1.15 "DejaVu Serif";text-transform:uppercase}
+.cta p{color:#e7dcff;margin-top:8px;font-size:12px}
+.contact{background:#fff;border-radius:18px;padding:16px 18px;color:#1e0b4a}
+.contact .n{font:700 15px "DejaVu Serif"}
+.contact .r{font:500 10.5px/1.5 "Inter";color:#6d5aa3;margin-top:2px}
+.contact .ln{font:600 11px "Inter";margin-top:8px;color:#3b2a66}
+.contact .ln b{display:block;margin-bottom:2px;font:700 9px "DejaVu Sans";letter-spacing:1.5px;color:#7c3aed;text-transform:uppercase}
+.contact a{color:#5b21b6;text-decoration:none}
+.note{font:400 9.5px/1.5 "Inter";color:#8a7bb5;margin-top:14px}
+</style></head>
+<body>
+
+<!-- PAGE 1 -->
+<section class="page" id="p1">
+ <div class="top"><div class="brand">DR. AZKA</div><div class="count">PROPOSAL · 01 / 03</div></div>
+ <div class="content">
+  <span class="pill">CLINIC GROWTH PROPOSAL</span>
+  <div style="margin-top:18px;height:166px"><h1 class="cond">Doctor-led<br>clinic growth.<br><span class="hl">Branding + systems.</span></h1></div>
+  <p class="lead" style="margin-top:10px;max-width:560px">We help private clinics turn attention into booked patients, with doctor-led branding and automated patient systems, built and run together.</p>
+
+  <div class="sec grid2" style="gap:22px;align-items:start">
+   <div>
+    <div class="kicker">Who we are</div>
+    <h2 class="cond" style="font-size:26px">Medicine + engineering</h2>
+    <p style="margin-top:6px">The agency is led by <strong>Dr. Azka Muzammil Qazi</strong>, a medical doctor. We are building our agency with medical professionals and our own team of software and AI engineers.</p>
+    <p style="margin-top:6px">Healthcare insight and engineering sit in the same team, so every system we build is designed around how patients and clinics actually work.</p>
+    <p style="margin-top:6px">We are <strong>based in the UAE</strong> and plan to expand to the USA soon. Our focus is clinic owners and doctors in private practice.</p>
+   </div>
+   <div>
+    <div class="kicker">The problem we solve</div>
+    <h2 class="cond" style="font-size:26px">Leads in, patients out</h2>
+    <p style="margin-top:6px">Clinics spend on content and ads, then lose patients <strong>after</strong> the enquiry arrives. Patients compare replies, not credentials. The fastest helpful clinic usually wins.</p>
+    <p style="margin-top:6px">Most patients research in the evening, after the front desk has gone home. A missed call, a next-day reply or a bare price is often enough to send them to the next clinic.</p>
+    <p style="margin-top:6px">Most agencies stop at content. We cover the full patient journey: the post that gets noticed, the reply at 9 PM, the follow-up and the rebooking months later.</p>
+   </div>
+  </div>
+
+  <div class="sec bar">Content gets you the opportunity.<br>Your systems decide what happens to it.</div>
+
+  <div class="sec">
+   <div class="kicker">What we do</div>
+   <h2 class="cond">Three services, built to work together</h2>
+   <div class="grid3" style="margin-top:12px">
+    <div class="card"><div class="num">1</div><h3>Doctor personal branding</h3><p>Each doctor positioned in one clear specialty lane, with scripts, hooks and content they can film in one session.</p><div class="why">Patients book doctors they feel they know, not logos.</div></div>
+    <div class="card"><div class="num">2</div><h3>Clinic branding</h3><p>A doctor-led clinic account: every specialist visible, one lane per doctor, consistent daily content.</p><div class="why">One account, several reasons to book. Content stays if a doctor leaves.</div></div>
+    <div class="card"><div class="num">3</div><h3>Automated patient systems</h3><p>Instant replies, missed-call text-back, booking-focused price replies, follow-ups and rebooking reminders.</p><div class="why">Enquiries that already came in stop going cold.</div></div>
+   </div>
+  </div>
+ </div>
+ <div class="foot"><span>Dr. Azka · Doctor-led clinic growth</span><span>UAE</span></div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="p2">
+ <div class="top"><div class="brand">DR. AZKA</div><div class="count">PROPOSAL · 02 / 03</div></div>
+ <div class="content">
+  <div class="kicker">The automated systems we built</div>
+  <div style="height:84px"><h1 class="cond" style="font-size:44px">Five systems.<br><span class="hl">Five leaks closed.</span></h1></div>
+  <p style="margin-top:6px;max-width:600px">One system for each point where clinics most often lose patients. Each runs on its own, and the clinic team takes over when a person is needed.</p>
+
+  <div class="sys"><div class="leak"><div class="l">✗ Leak 01</div><div class="t">A missed call. No text back.</div></div>
+   <div class="fix"><div class="l">✓ Missed-call text-back</div><div class="t">A friendly text within 60 seconds.</div><p>Calls missed during busy hours or after closing get an automatic reply asking how the clinic can help, so the patient doesn't call the next clinic.</p></div></div>
+
+  <div class="sys"><div class="leak"><div class="l">✗ Leak 02</div><div class="t">A 9 PM DM. A next-day reply.</div></div>
+   <div class="fix"><div class="l">✓ After-hours instant reply</div><div class="t">An instant first reply, day or night.</div><p>Enquiries after closing are answered straight away. The team picks the conversation up in the morning.</p></div></div>
+
+  <div class="sys"><div class="leak"><div class="l">✗ Leak 03</div><div class="t">"How much?" Just a price back.</div></div>
+   <div class="fix"><div class="l">✓ Booking-focused price reply</div><div class="t">A price range + one question + two times.</div><p>Price-only replies get compared. Helpful replies that offer appointment times get booked.</p></div></div>
+
+  <div class="sys"><div class="leak"><div class="l">✗ Leak 04</div><div class="t">"I'll think about it." Silence.</div></div>
+   <div class="fix"><div class="l">✓ Follow-up sequence</div><div class="t">Polite follow-ups, then stop.</div><div class="chips"><span class="chip">DAY 3</span><span class="chip">DAY 7</span><span class="chip">DAY 21</span><span class="chip ghost">STOP</span></div></div></div>
+
+  <div class="sys"><div class="leak"><div class="l">✗ Leak 05</div><div class="t">Treated once. Never contacted again.</div></div>
+   <div class="fix"><div class="l">✓ Rebooking reminder</div><div class="t">A reminder timed to the treatment.</div><p>Past patients are invited back at the right moment. The easiest new patient is one the clinic already treated.</p></div></div>
+
+  <div class="punch" style="margin-top:30px">These systems support the front desk; they don't replace it. Every message is written in the clinic's own voice and approved before it goes live.</div>
+ </div>
+ <div class="foot"><span>Dr. Azka · Doctor-led clinic growth</span><span>UAE</span></div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page" id="p3">
+ <div class="top"><div class="brand">DR. AZKA</div><div class="count">PROPOSAL · 03 / 03</div></div>
+ <div class="content">
+  <div class="kicker">How a clinic gets started</div>
+  <h2 class="cond">Evidence first, not a sales pitch</h2>
+  <div class="steps">
+   <div class="step hot"><div class="s">STEP 01</div><h4>Patient-Leak Audit</h4><p>Complimentary. We test the clinic like a patient: a 9 PM DM, a price question, a missed call. A short written report follows.</p></div>
+   <div class="step"><div class="s">STEP 02</div><h4>15-minute review call</h4><p>We walk through the findings and agree which leaks matter most.</p></div>
+   <div class="step"><div class="s">STEP 03</div><h4>60-day pilot</h4><p>We set up the systems and branding the clinic needs, run them and review what changed.</p></div>
+   <div class="step"><div class="s">STEP 04</div><h4>Ongoing</h4><p>Daily content, system upkeep and regular reviews for clinics that continue.</p></div>
+  </div>
+
+  <div class="sec">
+   <div class="kicker">Working alongside other providers</div>
+   <h2 class="cond">We fit next to what clinics already use</h2>
+   <p style="margin-top:4px;max-width:640px">Many clinics already work with an agency, consultant, software provider or advisor. Our work complements theirs rather than competing with it.</p>
+   <div class="grid3" style="margin-top:12px">
+    <div class="card"><h3>Agencies &amp; content teams</h3><p>They bring the attention. Our systems make sure the enquiries they generate get answered and booked.</p></div>
+    <div class="card"><h3>Consultants &amp; advisors</h3><p>They can offer their clinic clients the audit as a practical, low-risk first step.</p></div>
+    <div class="card"><h3>Healthcare &amp; tech providers</h3><p>They can pair their tools with our reply scripts and follow-up flows.</p></div>
+   </div>
+   <p style="margin-top:12px"><strong>The clinic stays the client of whoever brought them.</strong> We report results openly, so everyone sees what the work delivers.</p>
+  </div>
+
+  <div class="sec grid2" style="gap:22px;align-items:start">
+   <div>
+    <div class="kicker">Our standards</div>
+    <ul class="ticks">
+     <li><strong>Doctor-led.</strong> Built by a medical doctor who understands how patients decide and how clinics run.</li>
+     <li><strong>Honest numbers.</strong> Real results only. No guaranteed outcomes, no invented statistics.</li>
+    </ul>
+   </div>
+   <div>
+    <div class="kicker" style="visibility:hidden">.</div>
+    <ul class="ticks">
+     <li><strong>Patient privacy first.</strong> No real patient data in content; messages follow the clinic's own policies.</li>
+     <li><strong>Compliance-aware.</strong> Planned with UAE and US healthcare advertising rules in mind, and checked with the clinic before going live.</li>
+    </ul>
+   </div>
+  </div>
+
+  <div class="sec cta">
+   <div><h3>Next step: one complimentary audit.</h3><p>It takes us a few days, costs the clinic nothing, and shows exactly where patients are being lost.</p></div>
+   <div class="contact">
+    <div class="n">Dr. Azka Muzammil Qazi</div>
+    <div class="r">Based in the UAE · plans to expand to the USA soon</div>
+    <div class="ln"><b>Email</b><a href="mailto:Muzammilazka16@gmail.com">Muzammilazka16@gmail.com</a></div>
+    <div class="ln"><b>Instagram</b><a href="https://www.instagram.com/doctor_azka">@doctor_azka</a></div>
+   </div>
+  </div>
+ </div>
+ <div class="foot"><span>Dr. Azka · Doctor-led clinic growth</span><span>UAE</span></div>
+</section>
+</body></html>

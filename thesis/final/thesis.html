@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Founder Thesis — Dr. Azka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+@page { size: A4; margin: 0; }
+:root{
+  --plum:#24103f; --plum2:#3b1a66; --violet:#6d3fc0; --lav:#efe8fb; --lav2:#f7f3fd;
+  --gold:#c9a45c; --gold2:#e8d3a3; --ink:#221a33; --muted:#6b6380; --line:#e4dcf2; --paper:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper)}
+body{font-family:Inter,"Liberation Sans",sans-serif;color:var(--ink);font-size:10.4pt;line-height:1.55;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.serif,h1,h2,h3{font-family:"Playfair Display","Bitstream Charter",Georgia,serif}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;padding:22mm 20mm 20mm}
+.page:last-child{page-break-after:auto}
+
+/* running header/footer */
+.run{position:absolute;left:20mm;right:20mm;top:10mm;display:flex;justify-content:space-between;font-size:7.5pt;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.run b{color:var(--violet);font-weight:600}
+.foot{position:absolute;left:20mm;right:20mm;bottom:9mm;display:flex;justify-content:space-between;font-size:7.5pt;color:var(--muted);border-top:1px solid var(--line);padding-top:3mm}
+
+/* cover */
+.cover{background:radial-gradient(circle at 85% 12%,rgba(201,164,92,.28) 0,rgba(201,164,92,0) 32%),radial-gradient(circle at 0% 100%,rgba(109,63,192,.55) 0,rgba(109,63,192,0) 45%),linear-gradient(160deg,#2c1350 0%,#1b0b31 70%);color:#fff;padding:26mm 22mm}
+.cover .tag{display:inline-block;border:1px solid var(--gold);color:var(--gold2);font-size:8pt;letter-spacing:.28em;text-transform:uppercase;padding:2.2mm 4mm;border-radius:20px}
+.cover h1{font-size:40pt;line-height:1.08;font-weight:600;margin-top:34mm;letter-spacing:-.5px}
+.cover h1 em{font-style:italic;color:var(--gold2)}
+.cover .sub{font-size:13pt;color:#d9cdef;margin-top:8mm;max-width:150mm;line-height:1.5}
+.cover .rule{width:30mm;height:2px;background:var(--gold);margin:14mm 0 8mm}
+.cover .quote{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:15pt;color:#fff;max-width:150mm;line-height:1.4}
+.cover .meta{position:absolute;left:22mm;right:22mm;bottom:24mm;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(232,211,163,.35);padding-top:7mm}
+.cover .meta .who{font-family:"Playfair Display",Georgia,serif;font-size:17pt}
+.cover .meta .role{font-size:9pt;color:#cbbde6;margin-top:1.5mm;letter-spacing:.04em}
+.cover .meta .for{text-align:right;font-size:8.5pt;color:#cbbde6;letter-spacing:.12em;text-transform:uppercase;line-height:1.7}
+.cover .meta .for b{color:var(--gold2);font-weight:600}
+
+/* section heads */
+.kicker{font-size:8pt;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h2{font-size:23pt;line-height:1.15;color:var(--plum);font-weight:600;margin:2mm 0 5mm}
+h2 em{color:var(--violet)}
+h3{font-size:13pt;color:var(--plum);font-weight:600;margin:0 0 2mm}
+p+p{margin-top:3mm}
+.lead{font-size:11.6pt;line-height:1.6;color:#3a2f52}
+.sec{margin-top:7mm}
+strong{color:var(--plum);font-weight:600}
+
+/* blocks */
+.pull{border-left:3px solid var(--gold);padding:3mm 0 3mm 6mm;margin:6mm 0;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:14pt;color:var(--plum2);line-height:1.4}
+.card{background:var(--lav2);border:1px solid var(--line);border-radius:4mm;padding:5mm 6mm}
+.dark{background:linear-gradient(140deg,var(--plum2),var(--plum));color:#fff;border-radius:4mm;padding:6mm 7mm}
+.dark h3,.dark strong{color:var(--gold2)}
+.dark p{color:#e6dcf6}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+.num{font-family:"Playfair Display",Georgia,serif;font-size:22pt;color:var(--violet);line-height:1}
+.pillar .n{font-size:8pt;letter-spacing:.2em;color:var(--gold);font-weight:700}
+.pillar h3{font-size:12pt;margin-top:1.5mm}
+.pillar p{font-size:9.4pt;color:#4a4060}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:5mm}
+.stat{border:1px solid var(--line);border-radius:4mm;padding:4.5mm 5mm;background:#fff}
+.stat .v{font-family:"Playfair Display",Georgia,serif;font-size:21pt;color:var(--plum);line-height:1.05}
+.stat .c{display:inline-block;margin-top:1.5mm;font-size:8pt;font-weight:700;color:#fff;background:var(--violet);border-radius:10px;padding:.6mm 2.6mm}
+.stat .l{font-size:8.6pt;color:var(--muted);margin-top:2mm;line-height:1.35}
+.stat.hi{background:linear-gradient(140deg,var(--plum2),var(--plum));border:0}
+.stat.hi .v{color:var(--gold2)}.stat.hi .l{color:#d6c9ee}.stat.hi .c{background:var(--gold);color:var(--plum)}
+.src{font-size:7.5pt;color:var(--muted);margin-top:3mm}
+
+/* journey */
+.journey{display:grid;grid-template-columns:repeat(6,1fr);gap:2.4mm;margin-top:6mm;position:relative}
+.step{background:#fff;border:1px solid var(--line);border-radius:3.5mm;padding:4mm 3mm 3.5mm;text-align:center;position:relative}
+.step .i{width:8mm;height:8mm;border-radius:50%;background:var(--violet);color:#fff;font-weight:700;font-size:9pt;display:flex;align-items:center;justify-content:center;margin:0 auto 2mm}
+.step b{display:block;font-size:9pt;color:var(--plum)}
+.step span{display:block;font-size:7.6pt;color:var(--muted);line-height:1.35;margin-top:1mm}
+.step.leak{border-color:#e7b9a6;background:#fff7f3}
+.step.leak .i{background:#c0583a}
+.legend{font-size:8pt;color:var(--muted);margin-top:2.5mm}
+.legend i{display:inline-block;width:2.6mm;height:2.6mm;border-radius:50%;background:#c0583a;margin-right:1.5mm;vertical-align:middle}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:9.4pt}
+th{text-align:left;font-size:7.8pt;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--plum);padding:2.8mm 4mm;font-weight:600}
+th:first-child{border-top-left-radius:3mm}th:last-child{border-top-right-radius:3mm}
+td{padding:3mm 4mm;border-bottom:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:var(--lav2)}
+td.k{font-weight:600;color:var(--plum);width:34%}
+td .no{color:#b3492e;font-weight:600}
+
+ul.tick{list-style:none;margin-top:2mm}
+ul.tick li{padding-left:6mm;position:relative;margin:1.6mm 0}
+ul.tick li:before{content:"";position:absolute;left:0;top:2mm;width:2.4mm;height:2.4mm;border-radius:50%;background:var(--gold)}
+.dark ul.tick li{color:#e6dcf6}
+
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:4mm}
+.tl{border-top:3px solid var(--violet);background:var(--lav2);border-radius:0 0 4mm 4mm;padding:4.5mm 5mm}
+.tl:nth-child(2){border-color:var(--plum2)}.tl:nth-child(3){border-color:var(--gold)}
+.tl .when{font-size:8pt;letter-spacing:.18em;text-transform:uppercase;color:var(--violet);font-weight:700}
+.tl ul{font-size:9.2pt}
+
+.ph{background:#fff3c4;padding:0 1mm;border-radius:1mm}
+.badge{display:inline-block;font-size:7.6pt;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--plum);background:var(--gold2);border-radius:10px;padding:.8mm 3mm}
+.small{font-size:8.8pt;color:var(--muted)}
+
+.closing{background:radial-gradient(circle at 90% 10%,rgba(201,164,92,.25) 0,rgba(201,164,92,0) 35%),linear-gradient(150deg,#2c1350,#1b0b31);color:#fff;border-radius:5mm;padding:7mm 9mm;margin-top:6mm}
+.closing p{font-family:"Playfair Display",Georgia,serif;font-size:12.5pt;line-height:1.45;font-style:italic;color:#f3ecff}
+.closing .sig{margin-top:4mm;font-family:Inter,sans-serif;font-style:normal;font-size:9pt;color:#cbbde6}
+.closing .sig b{display:block;font-family:"Playfair Display",Georgia,serif;font-size:15pt;color:var(--gold2);font-weight:600;margin-bottom:1mm}
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<section class="page cover">
+  <span class="tag">Founder Thesis · Healthcare · UAE &amp; GCC</span>
+  <h1>Patients don't book buildings.<br><em>They book doctors they trust.</em></h1>
+  <p class="sub">A medical agency built by medical professionals to help Dubai's clinics and doctors win, convert and keep patients across the entire patient journey.</p>
+  <div class="rule"></div>
+  <p class="quote">"Content gets a clinic the opportunity.<br>Its systems decide what happens next."</p>
+  <div class="meta">
+    <div>
+      <div class="who">Dr. Azka <span class="ph" style="color:var(--plum)">[Surname]</span></div>
+      <div class="role">Founder · <span class="ph" style="color:var(--plum)">[Agency name]</span> · Dubai, UAE</div>
+    </div>
+    <div class="for">Prepared for<br><b>Founders Club International</b><br>November 2026</div>
+  </div>
+</section>
+
+<!-- ============ 1. SUMMARY ============ -->
+<section class="page">
+  <div class="run"><span><b>01</b> &nbsp;Summary</span><span>Founder Thesis · Dr. Azka</span></div>
+
+  <div class="kicker">Executive summary</div>
+  <h2>We are not a marketing agency.<br><em>We are medical professionals.</em></h2>
+
+  <p class="lead">Dubai's healthcare sector is growing fast. More facilities and more licensed professionals mean more clinics competing for the same patients. Most of the investment goes into being <em>seen</em>. Very little goes into what happens after a patient sends the first message.</p>
+
+  <p>I am a medical doctor and the founder of <span class="ph">[Agency name]</span>, a <strong>medical agency for private clinics and doctors in Dubai and the wider GCC</strong>. Our team is made up of <strong>doctors, medical professionals and medical students</strong>, supported by our own <strong>software and AI engineers</strong>. We understand patients because we are trained to care for them. That changes how a clinic is branded, how it speaks to patients and how it keeps them.</p>
+
+  <div class="sec grid3">
+    <div class="card pillar"><div class="n">01</div><h3>Clinics built around specialists</h3><p>We build each clinic's brand around its specialists, so patients choose the clinic because of the doctors inside it.</p></div>
+    <div class="card pillar"><div class="n">02</div><h3>Doctor personal branding</h3><p>Positioning and content for the doctors patients actually book, written by people who understand clinical communication.</p></div>
+    <div class="card pillar"><div class="n">03</div><h3>Automated patient journeys</h3><p>Systems that turn every enquiry into a booked, attending and returning patient, around the clock.</p></div>
+  </div>
+
+  <div class="pull">In healthcare, growth depends on trust, and trust is built by doctors. The clinics that win the next phase of Dubai's growth will be the ones that answer, reassure, book and follow up with patients best.</div>
+
+  <div class="dark">
+    <h3>What I'm seeking from Founders Club International</h3>
+    <p>My main objectives are <strong>scalability and placement</strong>: positioning across the UAE and GCC, introductions to clinic owners, healthcare groups and decision-makers, and strategic guidance on growing the agency. I am also <strong>open to investment</strong> where it accelerates one clear opportunity: an <strong>International Patient Desk</strong> serving Gap 03 (medical tourism) from FCI's own Dubai healthcare analysis.</p>
+  </div>
+
+  <div class="foot"><span>Confidential · Prepared for Founders Club International</span><span>2</span></div>
+</section>
+
+<!-- ============ 2. MARKET ============ -->
+<section class="page">
+  <div class="run"><span><b>02</b> &nbsp;The market signal</span><span>Founder Thesis · Dr. Azka</span></div>
+
+  <div class="kicker">The market signal</div>
+  <h2>Dubai healthcare is growing.<br><em>So is the competition for every patient.</em></h2>
+  <p class="lead">DHA figures for H1 2026, compared with H1 2025:</p>
+
+  <div class="stats">
+    <div class="stat hi"><div class="v">5,931</div><span class="c">+7%</span><div class="l">Licensed health facilities, roughly 390 more than a year earlier</div></div>
+    <div class="stat"><div class="v">70,566</div><span class="c">+6.5%</span><div class="l">Licensed health professionals, about two-thirds of them women</div></div>
+    <div class="stat"><div class="v">1,903</div><span class="c">+9.9%</span><div class="l">Medical complexes and optical centres</div></div>
+    <div class="stat"><div class="v">249</div><span class="c">+22.7%</span><div class="l">Home healthcare facilities, the fastest-growing category</div></div>
+    <div class="stat"><div class="v">5,378</div><span class="c">+36.3%</span><div class="l">DHA inspection and monitoring visits</div></div>
+    <div class="stat hi"><div class="v" style="font-size:14pt;line-height:1.25">OB/GYN · Paediatrics · Dermatology</div><div class="l">Among the fastest-growing specialties</div></div>
+  </div>
+  <p class="src">Source: Dubai Health Authority, H1 2026 data, as compiled in the healthcare analysis shared by Founders Club International.</p>
+
+  <div class="sec">
+    <h3>What this means for a clinic owner</h3>
+    <table>
+      <tr><th>Signal</th><th>The consequence</th></tr>
+      <tr><td class="k">More supply, same patients</td><td>Hundreds of new facilities competing for the same online attention. A patient comparing three dermatology clinics picks the one that replies first and reassures best.</td></tr>
+      <tr><td class="k">More scrutiny</td><td>Inspections rose by more than a third. Patient communication and marketing must be compliant as well as effective, which a medical team is trained for.</td></tr>
+      <tr><td class="k">Doctors without visibility</td><td>Over 70,000 licensed professionals, yet most doctors have no personal brand, even though they are the reason patients book.</td></tr>
+    </table>
+  </div>
+
+  <div class="foot"><span>Confidential · Prepared for Founders Club International</span><span>3</span></div>
+</section>
+
+<!-- ============ 3. GAP ============ -->
+<section class="page">
+  <div class="run"><span><b>03</b> &nbsp;The gap</span><span>Founder Thesis · Dr. Azka</span></div>
+
+  <div class="kicker">The gap</div>
+  <h2>The private clinic's front door<br><em>is where patients are lost.</em></h2>
+
+  <p class="lead">FCI's analysis identifies five open gaps in Dubai healthcare. Each sits inside care delivery or payment. Before all of them is a gap almost no one is building into: the journey between a patient discovering a doctor and walking into the appointment.</p>
+
+  <div class="journey">
+    <div class="step"><div class="i">1</div><b>Discovery</b><span>Sees a doctor or clinic online</span></div>
+    <div class="step"><div class="i">2</div><b>Trust</b><span>"Is this doctor right for me?"</span></div>
+    <div class="step leak"><div class="i">3</div><b>First contact</b><span>A 9 PM WhatsApp: "How much? Does it hurt?"</span></div>
+    <div class="step leak"><div class="i">4</div><b>Reply</b><span>Slow or price-only replies lose the patient</span></div>
+    <div class="step leak"><div class="i">5</div><b>Attendance</b><span>No reminders, so no-shows</span></div>
+    <div class="step leak"><div class="i">6</div><b>Return</b><span>No follow-up, so no second visit</span></div>
+  </div>
+  <p class="legend"><i></i>Patient leaks: points where the clinic has already paid for attention and then loses the patient.</p>
+
+  <div class="sec">
+    <h3>Why the gap is still open</h3>
+    <table>
+      <tr><th>Who serves clinics today</th><th>What's missing</th></tr>
+      <tr><td class="k">Marketing &amp; content agencies</td><td><span class="no">No medical understanding.</span> Generic content, compliance risk, nothing after the post.</td></tr>
+      <tr><td class="k">Personal-brand coaches</td><td><span class="no">No systems.</span> No replies, bookings or follow-up.</td></tr>
+      <tr><td class="k">CRM &amp; booking software</td><td><span class="no">No strategy or voice.</span> Tools without the human patient experience.</td></tr>
+      <tr><td class="k">Front-desk teams</td><td><span class="no">No after-hours cover.</span> No scripts, no measurement.</td></tr>
+    </table>
+  </div>
+
+  <div class="pull">Nobody is accountable for whether the patient actually books, attends and returns. We are building the one partner who is, with medical professionals leading every account.</div>
+
+  <div class="foot"><span>Confidential · Prepared for Founders Club International</span><span>4</span></div>
+</section>
+
+<!-- ============ 4. WHAT WE DO ============ -->
+<section class="page">
+  <div class="run"><span><b>04</b> &nbsp;What we do</span><span>Founder Thesis · Dr. Azka</span></div>
+
+  <div class="kicker">The model</div>
+  <h2>One medical partner<br><em>for the entire patient journey.</em></h2>
+
+  <div class="grid2">
+    <div class="card">
+      <span class="badge">Brand</span>
+      <h3 style="margin-top:3mm">Building clinics around specialists</h3>
+      <p>There are two types of branding in healthcare, and every clinic owner or private-practice doctor needs both:</p>
+      <ul class="tick">
+        <li><strong>Clinic branding</strong> built around its specialists, so the doctors become the reason patients choose the clinic.</li>
+        <li><strong>Personal branding</strong> for each doctor: positioning, content strategy and scripts.</li>
+      </ul>
+      <p class="small" style="margin-top:2mm">Written by medical professionals, so it's medically accurate and aligned with UAE health-advertising rules.</p>
+    </div>
+    <div class="card">
+      <span class="badge">Systems</span>
+      <h3 style="margin-top:3mm">Automated patient journeys</h3>
+      <p>Built in-house by our software and AI engineers:</p>
+      <ul class="tick">
+        <li>Instant, on-brand replies on WhatsApp, Instagram and web, 24/7</li>
+        <li>Answers to price and "doubt" questions, using the doctor's own short videos</li>
+        <li>Booking, confirmations and reminders that reduce no-shows</li>
+        <li>Follow-up and reactivation of past patients</li>
+        <li>A clear dashboard: enquiries, reply time, bookings, return rate</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec dark">
+    <h3>How a clinic starts: Patient-Leak Audit → 60-day pilot</h3>
+    <p>We test the clinic exactly as a patient would: a 9 PM message, a price question, a missed call. Then we deliver a short report showing where patients are lost. That leads to a <strong>60-day pilot</strong> with agreed metrics (reply time, booking rate, no-shows, reactivation) and then an ongoing partnership.</p>
+  </div>
+
+  <div class="sec card" style="background:#fff">
+    <h3>Safety by design</h3>
+    <p>Our systems handle enquiries, logistics and doctor-approved information only. They never diagnose or give medical advice, and anything clinical goes straight to the clinic's licensed staff. Patient data is handled in line with UAE data-protection and DHA requirements.</p>
+  </div>
+
+  <div class="foot"><span>Confidential · Prepared for Founders Club International</span><span>5</span></div>
+</section>
+
+<!-- ============ 5. GAP 03 ============ -->
+<section class="page">
+  <div class="run"><span><b>05</b> &nbsp;Filling Gap 03</span><span>Founder Thesis · Dr. Azka</span></div>
+
+  <div class="kicker">The growth opportunity · Gap 03 · Medical tourism</div>
+  <h2>The International Patient Desk</h2>
+
+  <p class="lead">FCI's analysis identifies medical tourism as an open gap: international patients need help with specialist discovery, appointment coordination, travel planning and aftercare. It's the same front door we already fix for local patients, with higher stakes and more steps. That makes it the natural next step for our agency.</p>
+
+  <div class="sec">
+    <h3>What the desk does for Dubai clinics</h3>
+    <div class="journey" style="grid-template-columns:repeat(5,1fr)">
+      <div class="step"><div class="i">1</div><b>Enquiry</b><span>Answered in the patient's language and time zone</span></div>
+      <div class="step"><div class="i">2</div><b>Medical review</b><span>Our medical team reviews reports and needs</span></div>
+      <div class="step"><div class="i">3</div><b>Specialist match</b><span>The right specialist and verified clinic</span></div>
+      <div class="step"><div class="i">4</div><b>Coordination</b><span>Appointments, travel timing, pre-visit prep</span></div>
+      <div class="step"><div class="i">5</div><b>Aftercare</b><span>Structured follow-up once the patient is home</span></div>
+    </div>
+  </div>
+
+  <div class="sec grid2">
+    <div>
+      <h3>Why we can win it</h3>
+      <ul class="tick">
+        <li><strong>Medical professionals at the front.</strong> International patients send reports and clinical questions before they travel. A medical team can read them and route correctly; a travel or marketing agency can't.</li>
+        <li><strong>Non-clinical by design.</strong> We coordinate and the licensed clinic treats, so patient safety stays with the clinician.</li>
+        <li><strong>Built on what we already run.</strong> Same systems, same team, same specialist-led clinic brands.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>How we'll start (FCI's playbook)</h3>
+      <ul class="tick">
+        <li><strong>One source market</strong>, e.g. <span class="ph">[Saudi Arabia / Qatar / home country]</span></li>
+        <li><strong>One treatment category</strong> within our starting specialties</li>
+        <li><strong>Licensed clinic partners</strong> in Dubai, with the right facilitator licensing confirmed with DHA</li>
+        <li><strong>Measured outcomes:</strong> enquiry-to-booking rate, time to appointment, patient satisfaction, aftercare completion</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec dark">
+    <h3>Where investment would go</h3>
+    <p>The core agency grows on client revenue. The International Patient Desk needs a dedicated product, and this is where investment would accelerate us:</p>
+    <ul class="tick">
+      <li>Additional developers to build a multilingual patient portal with secure report upload</li>
+      <li>A specialist-matching and coordination engine connected to partner clinics</li>
+      <li>A pilot in one source market, with dedicated medical coordinators</li>
+    </ul>
+  </div>
+
+  <div class="foot"><span>Confidential · Prepared for Founders Club International</span><span>6</span></div>
+</section>
+
+<!-- ============ 6. PLAYBOOK + TEAM ============ -->
+<section class="page">
+  <div class="run"><span><b>06</b> &nbsp;Validation &amp; team</span><span>Founder Thesis · Dr. Azka</span></div>
+
+  <div class="kicker">Against FCI's founder playbook</div>
+  <h2>A verified need,<br><em>and a compliant solution.</em></h2>
+
+  <table>
+    <tr><th style="width:26%">Playbook step</th><th>How we meet it</th></tr>
+    <tr><td class="k">01 · Pick one problem</td><td>One user: the private clinic owner. One pain: patients lost between first contact and the appointment. Starting specialties match DHA's fastest-growing: <strong>dermatology, OB/GYN and paediatrics</strong>.</td></tr>
+    <tr><td class="k">02 · Validate demand</td><td>Early conversations with clinic owners outside the UAE confirmed the same leaks. Our first UAE milestone is validating this in Dubai through Patient-Leak Audits with measured reply times.</td></tr>
+    <tr><td class="k">03 · Check the rules</td><td>A non-clinical service: no diagnosis, no treatment. All content is reviewed by medical professionals and aligned with DHA and UAE health-advertising rules.</td></tr>
+    <tr><td class="k">04 · Assess the sandbox</td><td>Not required for the current service. If a future product uses health data, Sandbox Dubai is the route.</td></tr>
+    <tr><td class="k">05 · Pilot, measure, scale</td><td>A 60-day pilot per clinic with before-and-after metrics, then clinic groups, then the International Patient Desk.</td></tr>
+  </table>
+
+  <div class="sec grid2">
+    <div>
+      <div class="kicker">Why this founder</div>
+      <h3 style="margin-top:2mm">A doctor who chose to build</h3>
+      <p>I graduated recently, at 24. Instead of a purely clinical path, I chose to build what clinics and doctors are missing. I understand medicine from the inside, I grew up digital, and I'm building for the next twenty years of healthcare, not the last twenty.</p>
+    </div>
+    <div>
+      <div class="kicker">Why this team</div>
+      <h3 style="margin-top:2mm">Medical minds, engineering hands</h3>
+      <ul class="tick">
+        <li>Doctors, medical professionals and medical students on every account</li>
+        <li>In-house software and AI engineers building every system</li>
+        <li>Clinic owners speak to us as peers, not vendors</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec card">
+    <h3>Beyond the agency</h3>
+    <p>I am also a certified <strong>NLP practitioner (American Board)</strong> and <strong>CPD-accredited (UK)</strong> coach in mind-body wellness and performance. It isn't the focus of this thesis, but it shapes how we build: understanding how people decide, what creates trust and what triggers fear goes into every patient script and system we design.</p>
+  </div>
+
+  <div class="foot"><span>Confidential · Prepared for Founders Club International</span><span>7</span></div>
+</section>
+
+<!-- ============ 7. GOALS + ASK ============ -->
+<section class="page">
+  <div class="run"><span><b>07</b> &nbsp;Goals &amp; partnership</span><span>Founder Thesis · Dr. Azka</span></div>
+
+  <div class="kicker">The vision</div>
+  <h2>The leading medical agency in the GCC,<br><em>run by medical professionals.</em></h2>
+
+  <div class="timeline">
+    <div class="tl"><div class="when">By March 2027</div>
+      <ul class="tick"><li>15+ Patient-Leak Audits of Dubai clinics</li><li>3–5 paying clinic pilots in Dubai</li><li>First UAE case studies with measured results</li></ul></div>
+    <div class="tl"><div class="when">By December 2027</div>
+      <ul class="tick"><li>10–20 active clinic clients across the UAE</li><li>Growing team of medical professionals and engineers</li><li>International Patient Desk piloted with one source market</li></ul></div>
+    <div class="tl"><div class="when">2028 onward</div>
+      <ul class="tick"><li>Expansion into Saudi Arabia and Qatar</li><li>Partnerships with clinic groups and healthcare operators</li><li>An annual Dubai Clinic Front-Door Report</li></ul></div>
+  </div>
+
+  <div class="sec grid2">
+    <div class="card">
+      <h3>What I'm asking from FCI</h3>
+      <ul class="tick">
+        <li><strong>Access:</strong> introductions to clinic owners, healthcare groups and healthtech founders</li>
+        <li><strong>Placement:</strong> FCI events and delegations, including Riyadh and Qatar</li>
+        <li><strong>Strategic guidance:</strong> scaling, pricing, market entry and partnerships</li>
+        <li><strong>Visibility:</strong> speaking on healthcare growth and patient experience</li>
+        <li><strong>Investment</strong>, where it fits, for the International Patient Desk</li>
+      </ul>
+    </div>
+    <div class="card" style="background:#fff">
+      <h3>What I bring to FCI</h3>
+      <ul class="tick">
+        <li>A doctor-founder in one of the region's fastest-growing sectors, building compliance-first</li>
+        <li>A co-branded <strong>FCI Dubai Clinic Front-Door Report</strong>: original healthcare insight for members and events</li>
+        <li>A bridge for FCI healthtech founders who need clinic partners, pilot sites and medical input</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="closing">
+    <p>Dubai is adding clinics, doctors and capital to healthcare every quarter. We're building the medical agency that helps clinics and doctors earn patients' trust and keep it at every step, so no patient is lost after the first message.</p>
+    <div class="sig"><b>Dr. Azka <span class="ph" style="color:var(--plum)">[Surname]</span></b>Founder, <span class="ph" style="color:var(--plum)">[Agency name]</span> · <span class="ph" style="color:var(--plum)">[Email]</span> · <span class="ph" style="color:var(--plum)">[Phone]</span> · Dubai, UAE</div>
+  </div>
+
+  <div class="foot"><span>Confidential · Prepared for Founders Club International</span><span>8</span></div>
+</section>
+
+</body>
+</html>

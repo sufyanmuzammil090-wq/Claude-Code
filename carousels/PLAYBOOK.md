@@ -44,7 +44,10 @@ reply speed, price DMs, follow-up, no-shows, reactivation, clinic branding acros
 That's the merge: **their format + Azka's full patient journey.**
 > Content gets you the opportunity. Your systems decide what happens to it.
 
-## 3. Daily mix (3 carousels)
+## 3. Daily mix (4 carousels from 22 Nov 2026; restart at Day 1)
+Scripts are discussed daily with Dr. Azka before designing. Slot 4 = Personal brand / doctor authority / Dr. Azka's story or proof.
+
+Original 3-slot mix:
 1. **Content** — hooks, rewrites, swipe files, what to post (share-driver, TOFU)
 2. **Clinic branding / positioning** — doctor-led clinic, lanes, trust, premium (TOFU/MOFU)
 3. **Patient leak / AI systems** — reply, follow-up, no-shows, reactivation, numbers (MOFU/BOFU)

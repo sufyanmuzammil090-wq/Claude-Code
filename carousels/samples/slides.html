@@ -1,4 +1,6 @@
 <!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Pen;src:url(../fonts/nothing-you-could-do-latin-400-normal.woff2)}
+@font-face{font-family:Pen2;src:url(../fonts/la-belle-aurore-latin-400-normal.woff2)}
 @font-face{font-family:Caveat;src:url(../fonts/caveat-latin-700-normal.woff2);font-weight:700}
 @font-face{font-family:Caveat;src:url(../fonts/caveat-latin-500-normal.woff2);font-weight:500}
 @font-face{font-family:Playfair;src:url(../fonts/playfair-display-latin-800-normal.woff2);font-weight:800}
@@ -19,24 +21,25 @@
 .pad:before{content:"";position:absolute;inset:0 0 auto 0;height:250px;background:#fffdf9;border-radius:18px 18px 0 0}
 .lh{position:relative;padding-top:56px;display:flex;justify-content:space-between;align-items:flex-start}
 .lh .nm{font:800 54px Playfair;color:var(--dark);letter-spacing:.5px}
-.lh .sub{font:700 20px Inter;letter-spacing:5px;color:var(--v2);margin-top:6px}
+.lh .sub{font:700 18px Inter;letter-spacing:4px;color:var(--v2);margin-top:6px}
 .lh .cr{width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#5b21b6);display:flex;align-items:center;justify-content:center;color:#fff;font:800 40px Inter}
 .meta{position:relative;display:flex;gap:40px;margin-top:28px;padding-bottom:20px;border-bottom:3px solid var(--v);font:500 22px Inter;color:#6b5a99}
-.meta b{font:700 34px Caveat;color:var(--ink);margin-left:8px}
+.meta b{font:400 36px Pen;color:#3b1d8f;margin-left:10px;filter:url(#ink)}
 .rxs{position:absolute;left:62px;top:282px;font:800 italic 150px Playfair;color:var(--v2);line-height:1}
-.hand{font-family:Caveat;color:var(--ink)}
+.ink{color:#3b1d8f;filter:url(#ink)}
+.ink .ch{display:inline-block;white-space:pre}
 .dx{position:absolute;left:210px;top:300px;right:60px}
 .dx .l{font:700 30px Inter;letter-spacing:4px;color:#a68ee0}
-.dx .big{font:700 104px/0.98 Caveat;color:var(--ink);margin-top:4px}
-.hlt{background:linear-gradient(100deg,rgba(196,170,255,0) 1%,rgba(190,160,255,.75) 4%,rgba(196,170,255,.6) 94%,rgba(196,170,255,0) 99%);padding:0 10px;border-radius:6px}
+.dx .big{font:400 78px/1.28 Pen;margin-top:14px}
+.hlt{background:linear-gradient(178deg,transparent 30%,rgba(181,148,255,.55) 32%,rgba(170,135,252,.62) 70%,rgba(181,148,255,.4) 86%,transparent 88%);padding:0 14px;margin:0 -6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .sx{position:absolute;left:70px;right:70px;top:610px}
 .sx .l{font:700 26px Inter;letter-spacing:4px;color:#a68ee0;margin-bottom:6px}
-.sx li{list-style:none;font:700 54px/72px Caveat;color:var(--ink)}
+.sx li{list-style:none;font:400 44px/72px Pen}
 .sx li:before{content:"✕ ";color:#c0392b;font-size:40px}
-.plan{position:absolute;left:70px;right:70px;top:900px;font:700 60px Caveat;color:var(--v)}
+.plan{position:absolute;left:70px;right:70px;top:900px;font:400 50px Pen}
 .plan u{text-decoration-thickness:4px;text-underline-offset:10px}
 .sig{position:absolute;right:80px;bottom:46px;text-align:right}
-.sig .s{font:700 64px Caveat;color:var(--v);transform:rotate(-4deg)}
+.sig .s{font:400 76px Pen2;color:#3b1d8f;transform:rotate(-5deg);filter:url(#ink)}
 .sig .t{font:500 18px Inter;letter-spacing:3px;color:#8a7bb5;border-top:2px solid #cbbcf2;padding-top:8px;margin-top:-6px}
 .stamp{position:absolute;left:600px;top:250px;transform:rotate(12deg);border:5px solid rgba(124,58,237,.55);color:rgba(124,58,237,.6);font:800 28px Inter;letter-spacing:4px;padding:10px 18px;border-radius:12px}
 .swipe{position:absolute;right:60px;bottom:28px;font:700 26px Inter;color:#fff;letter-spacing:2px}
@@ -67,19 +70,19 @@
 .ph{position:absolute;inset:0;background:linear-gradient(160deg,#c4b0fb,#7c3aed);border-radius:240px 240px 0 0;border:12px solid #fff;border-bottom:0;box-shadow:0 30px 60px rgba(91,33,182,.3);display:flex;align-items:center;justify-content:center;flex-direction:column;color:#fff}
 .ph svg{width:260px;opacity:.55}
 .ph div{font:800 24px Inter;letter-spacing:4px;margin-top:10px;opacity:.85}
-.note{position:absolute;left:80px;top:860px;width:470px;font:700 50px/1.12 Caveat;color:var(--v)}
+.note{position:absolute;left:80px;top:860px;width:480px;font:400 46px/1.35 Pen}
 .note svg{display:block;margin-top:10px}
 .pill{position:absolute;left:80px;bottom:80px;background:var(--v);color:#fff;font:700 28px Inter;padding:18px 34px;border-radius:40px;box-shadow:0 14px 30px rgba(91,33,182,.3)}
-</style></head><body>
+</style></head><body><svg width="0" height="0" style="position:absolute"><filter id="ink"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.2"/><feGaussianBlur stdDeviation="0.35"/></filter></svg>
 
 <div class="slide" id="rx">
  <div class="pad">
-  <div class="lh"><div><div class="nm">Dr. Azka</div><div class="sub">CLINIC GROWTH · CONTENT · SYSTEMS</div></div><div class="cr">+</div></div>
+  <div class="lh"><div><div class="nm">Dr. Azka</div><div class="sub">DOCTOR PERSONAL BRANDING · CLINIC GROWTH</div></div><div class="cr">+</div></div>
   <div class="meta"><div>Patient:<b>Your clinic</b></div><div>Date:<b>Today</b></div></div>
   <div class="rxs">℞</div>
-  <div class="dx"><div class="l">DIAGNOSIS</div><div class="big">Your clinic is <span class="hlt">leaking patients.</span></div></div>
-  <div class="sx"><div class="l">SYMPTOMS</div><ul><li>Missed calls, no text back</li><li>9 PM DMs answered tomorrow</li><li>"I'll think about it"… then silence</li></ul></div>
-  <div class="plan">Treatment: <u>5 systems</u>. Swipe →</div>
+  <div class="dx"><div class="l">DIAGNOSIS</div><div class="ink big">Your clinic is <span class="hlt">leaking patients.</span></div></div>
+  <div class="sx"><div class="l">SYMPTOMS</div><ul class="ink"><li>Missed calls, no text back</li><li>9 PM DMs answered tomorrow</li><li>"I'll think about it"… then silence</li></ul></div>
+  <div class="ink plan">Treatment: <span class="hlt">5 systems</span>. Swipe →</div>
   <div class="sig"><div class="s">Dr. Azka</div><div class="t">SIGNATURE</div></div>
  </div>
 </div>
@@ -89,15 +92,22 @@
   <div class="who"><div class="av">DA</div><div><div class="n">Dr. Azka <i>+</i></div><div class="h">@your.handle</div></div></div>
   <div class="tx">Clinic owners, if a patient DMs you at 9 PM and you reply the next morning, <b>they might already be booked somewhere else.</b></div>
  </div>
- <div class="tw-foot"><div>Doctor · Clinic Growth</div><span>swipe →</span></div>
+ <div class="tw-foot"><div>Doctor Personal Branding · Clinic Growth</div><span>swipe →</span></div>
 </div>
 
 <div class="slide" id="ed">
  <div class="top"><div>DR. AZKA</div><span>01 / 06</span></div>
  <div class="eh">Patients don't book <span class="mk">clinics.</span><br>They book <em>doctors they feel they know.</em></div>
- <div class="note">Here's how to become that doctor
+ <div class="ink note">Here's how to become that doctor
   <svg width="300" height="90" viewBox="0 0 300 90"><path d="M10 20 C 90 90, 200 80, 270 40" stroke="#7c3aed" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M245 30 L272 40 L255 64" stroke="#7c3aed" stroke-width="5" fill="none" stroke-linecap="round"/></svg></div>
  <div class="cut"><div class="ph"><svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="20" fill="#fff"/><path d="M12 100 C 12 66, 88 66, 88 100Z" fill="#fff"/></svg><div>YOUR PHOTO</div></div></div>
  <div class="pill">Swipe →</div>
 </div>
-</body></html>
+<script>
+// natural pen jitter: per-letter baseline, size, angle and pressure
+let seed=7;const r=()=>{seed=(seed*16807)%2147483647;return seed/2147483647-.5};
+function walk(n){[...n.childNodes].forEach(c=>{if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(w=>{if(/^\s+$/.test(w)||!w){f.appendChild(document.createTextNode(w));return}const wd=document.createElement('span');wd.style.whiteSpace='nowrap';[...w].forEach(ch=>{const sp=document.createElement('span');sp.className='ch';sp.textContent=ch;
+ sp.style.transform=`translateY(${r()*3.2}px) rotate(${r()*3}deg) scale(${1+r()*0.06})`;sp.style.opacity=(0.84+Math.abs(r())*0.32).toFixed(2);wd.appendChild(sp)});f.appendChild(wd)});c.replaceWith(f)}else if(c.nodeType===1&&!c.matches('svg'))walk(c)})}
+document.querySelectorAll('.ink').forEach(walk);
+document.querySelectorAll('.sx li').forEach((li,i)=>li.style.transform=`rotate(${[-0.6,0.5,-0.3][i]}deg) translateX(${[0,6,-4][i]}px)`);
+</script></body></html>

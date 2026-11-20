@@ -99,3 +99,12 @@ Quality bar for every carousel:
 ## 7. Structure devices to rotate
 ✗/✓ rewrites · Instead of → Try table · two-column "most clinics vs booked clinics" · numbered rows ·
 journey map with leak points · illustrative bar chart · equation · chat-bubble mock-up · checklist · recap "start here".
+
+## 8. Visual style system (approved 20 Nov 2026)
+Palette: violet + white only. Fonts: Playfair Display (headlines), Inter (UI/labels), "Nothing You Could Do" (realistic violet pen), "La Belle Aurore" (signature). Files in `carousels/fonts/`, samples in `carousels/samples/`.
+Mix the three formats across the 10 daily posts:
+- **Rx Pad** — diagnosis / patient-leak / "what's costing you patients" posts. Letterhead: Dr. Azka · Doctor Personal Branding · Clinic Growth (+ agency name, TBC).
+- **Opinion card** — hot takes, contrarian beliefs, diagnostic questions. Photo + name + handle + one bold violet line.
+- **Editorial + photo arch** — big ideas, frameworks, lists, personal-brand posts.
+Body slides: clean violet/white, one idea + one punch line, pen-handwriting notes for emphasis.
+Pending from Dr. Azka: agency name, photo, Instagram handle, final tagline.

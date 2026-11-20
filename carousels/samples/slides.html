@@ -1,0 +1,103 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Caveat;src:url(../fonts/caveat-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Caveat;src:url(../fonts/caveat-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:Playfair;src:url(../fonts/playfair-display-latin-800-normal.woff2);font-weight:800}
+@font-face{font-family:Playfair;src:url(../fonts/playfair-display-latin-800-italic.woff2);font-weight:800;font-style:italic}
+@font-face{font-family:Playfair;src:url(../fonts/playfair-display-latin-600-italic.woff2);font-weight:600;font-style:italic}
+@font-face{font-family:Inter;src:url(../fonts/inter-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:Inter;src:url(../fonts/inter-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Inter;src:url(../fonts/inter-latin-800-normal.woff2);font-weight:800}
+*{margin:0;padding:0;box-sizing:border-box}body{background:#777}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;margin-bottom:20px}
+:root{--v:#5b21b6;--v2:#7c3aed;--ink:#4c1d95;--lav:#d9ccfb;--dark:#1e0b4a}
+
+/* RX PAD */
+#rx{background:radial-gradient(circle at 15% 10%,#efe7ff 0,#e2d5fd 45%,#cdb8f9 100%)}
+.pad{position:absolute;left:90px;top:95px;width:900px;height:1160px;background:#fffdf9;border-radius:18px;transform:rotate(-1.6deg);
+ box-shadow:0 40px 80px rgba(76,29,149,.28),0 6px 14px rgba(76,29,149,.15);
+ background-image:repeating-linear-gradient(#fffdf9 0 71px,#e8e0fb 71px 73px);background-position:0 300px;padding:0 70px}
+.pad:before{content:"";position:absolute;inset:0 0 auto 0;height:250px;background:#fffdf9;border-radius:18px 18px 0 0}
+.lh{position:relative;padding-top:56px;display:flex;justify-content:space-between;align-items:flex-start}
+.lh .nm{font:800 54px Playfair;color:var(--dark);letter-spacing:.5px}
+.lh .sub{font:700 20px Inter;letter-spacing:5px;color:var(--v2);margin-top:6px}
+.lh .cr{width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#5b21b6);display:flex;align-items:center;justify-content:center;color:#fff;font:800 40px Inter}
+.meta{position:relative;display:flex;gap:40px;margin-top:28px;padding-bottom:20px;border-bottom:3px solid var(--v);font:500 22px Inter;color:#6b5a99}
+.meta b{font:700 34px Caveat;color:var(--ink);margin-left:8px}
+.rxs{position:absolute;left:62px;top:282px;font:800 italic 150px Playfair;color:var(--v2);line-height:1}
+.hand{font-family:Caveat;color:var(--ink)}
+.dx{position:absolute;left:210px;top:300px;right:60px}
+.dx .l{font:700 30px Inter;letter-spacing:4px;color:#a68ee0}
+.dx .big{font:700 104px/0.98 Caveat;color:var(--ink);margin-top:4px}
+.hlt{background:linear-gradient(100deg,rgba(196,170,255,0) 1%,rgba(190,160,255,.75) 4%,rgba(196,170,255,.6) 94%,rgba(196,170,255,0) 99%);padding:0 10px;border-radius:6px}
+.sx{position:absolute;left:70px;right:70px;top:610px}
+.sx .l{font:700 26px Inter;letter-spacing:4px;color:#a68ee0;margin-bottom:6px}
+.sx li{list-style:none;font:700 54px/72px Caveat;color:var(--ink)}
+.sx li:before{content:"✕ ";color:#c0392b;font-size:40px}
+.plan{position:absolute;left:70px;right:70px;top:900px;font:700 60px Caveat;color:var(--v)}
+.plan u{text-decoration-thickness:4px;text-underline-offset:10px}
+.sig{position:absolute;right:80px;bottom:46px;text-align:right}
+.sig .s{font:700 64px Caveat;color:var(--v);transform:rotate(-4deg)}
+.sig .t{font:500 18px Inter;letter-spacing:3px;color:#8a7bb5;border-top:2px solid #cbbcf2;padding-top:8px;margin-top:-6px}
+.stamp{position:absolute;left:600px;top:250px;transform:rotate(12deg);border:5px solid rgba(124,58,237,.55);color:rgba(124,58,237,.6);font:800 28px Inter;letter-spacing:4px;padding:10px 18px;border-radius:12px}
+.swipe{position:absolute;right:60px;bottom:28px;font:700 26px Inter;color:#fff;letter-spacing:2px}
+
+/* TWEET */
+#tw{background:#fff}
+#tw .glow{position:absolute;right:-200px;top:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,#e4d8ff 0,rgba(228,216,255,0) 70%)}
+#tw .glow2{position:absolute;left:-250px;bottom:-250px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,#efe7ff 0,rgba(239,231,255,0) 70%)}
+.tc{position:absolute;left:90px;right:90px;top:330px}
+.who{display:flex;align-items:center;gap:26px}
+.av{width:136px;height:136px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#5b21b6);border:6px solid #fff;box-shadow:0 0 0 4px var(--lav);display:flex;align-items:center;justify-content:center;color:#fff;font:800 50px Inter}
+.who .n{font:800 46px Inter;color:#111;display:flex;align-items:center;gap:14px}
+.who .n i{width:38px;height:38px;border-radius:50%;background:var(--v2);display:inline-flex;align-items:center;justify-content:center;color:#fff;font:800 22px Inter;font-style:normal}
+.who .h{font:500 32px Inter;color:#8a8a99;margin-top:4px}
+.tx{margin-top:56px;font:500 64px/1.32 Inter;color:#18181b;letter-spacing:-.5px}
+.tx b{font-weight:800;color:var(--v)}
+.tw-foot{position:absolute;left:90px;right:90px;bottom:80px;display:flex;justify-content:space-between;align-items:center;font:700 28px Inter;color:#a1a1aa}
+.tw-foot span{color:var(--v2)}
+
+/* EDITORIAL */
+#ed{background:linear-gradient(170deg,#fff 0%,#f7f2ff 60%,#ebe1ff 100%)}
+.top{position:absolute;left:80px;right:80px;top:64px;display:flex;justify-content:space-between;font:800 24px Inter;letter-spacing:5px;color:var(--v)}
+.top span{background:#fff;border:2px solid var(--lav);border-radius:30px;padding:8px 20px;letter-spacing:3px}
+.eh{position:absolute;left:80px;right:80px;top:160px;font:800 116px/1.0 Playfair;color:var(--dark);letter-spacing:-2px}
+.eh em{font-style:italic;color:var(--v2)}
+.eh .mk{background:linear-gradient(transparent 58%,var(--lav) 58%, var(--lav) 92%,transparent 92%)}
+.cut{position:absolute;right:50px;bottom:0;width:420px;height:520px}
+.ph{position:absolute;inset:0;background:linear-gradient(160deg,#c4b0fb,#7c3aed);border-radius:240px 240px 0 0;border:12px solid #fff;border-bottom:0;box-shadow:0 30px 60px rgba(91,33,182,.3);display:flex;align-items:center;justify-content:center;flex-direction:column;color:#fff}
+.ph svg{width:260px;opacity:.55}
+.ph div{font:800 24px Inter;letter-spacing:4px;margin-top:10px;opacity:.85}
+.note{position:absolute;left:80px;top:860px;width:470px;font:700 50px/1.12 Caveat;color:var(--v)}
+.note svg{display:block;margin-top:10px}
+.pill{position:absolute;left:80px;bottom:80px;background:var(--v);color:#fff;font:700 28px Inter;padding:18px 34px;border-radius:40px;box-shadow:0 14px 30px rgba(91,33,182,.3)}
+</style></head><body>
+
+<div class="slide" id="rx">
+ <div class="pad">
+  <div class="lh"><div><div class="nm">Dr. Azka</div><div class="sub">CLINIC GROWTH · CONTENT · SYSTEMS</div></div><div class="cr">+</div></div>
+  <div class="meta"><div>Patient:<b>Your clinic</b></div><div>Date:<b>Today</b></div></div>
+  <div class="rxs">℞</div>
+  <div class="dx"><div class="l">DIAGNOSIS</div><div class="big">Your clinic is <span class="hlt">leaking patients.</span></div></div>
+  <div class="sx"><div class="l">SYMPTOMS</div><ul><li>Missed calls, no text back</li><li>9 PM DMs answered tomorrow</li><li>"I'll think about it"… then silence</li></ul></div>
+  <div class="plan">Treatment: <u>5 systems</u>. Swipe →</div>
+  <div class="sig"><div class="s">Dr. Azka</div><div class="t">SIGNATURE</div></div>
+ </div>
+</div>
+
+<div class="slide" id="tw"><div class="glow"></div><div class="glow2"></div>
+ <div class="tc">
+  <div class="who"><div class="av">DA</div><div><div class="n">Dr. Azka <i>+</i></div><div class="h">@your.handle</div></div></div>
+  <div class="tx">Clinic owners, if a patient DMs you at 9 PM and you reply the next morning, <b>they might already be booked somewhere else.</b></div>
+ </div>
+ <div class="tw-foot"><div>Doctor · Clinic Growth</div><span>swipe →</span></div>
+</div>
+
+<div class="slide" id="ed">
+ <div class="top"><div>DR. AZKA</div><span>01 / 06</span></div>
+ <div class="eh">Patients don't book <span class="mk">clinics.</span><br>They book <em>doctors they feel they know.</em></div>
+ <div class="note">Here's how to become that doctor
+  <svg width="300" height="90" viewBox="0 0 300 90"><path d="M10 20 C 90 90, 200 80, 270 40" stroke="#7c3aed" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M245 30 L272 40 L255 64" stroke="#7c3aed" stroke-width="5" fill="none" stroke-linecap="round"/></svg></div>
+ <div class="cut"><div class="ph"><svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="20" fill="#fff"/><path d="M12 100 C 12 66, 88 66, 88 100Z" fill="#fff"/></svg><div>YOUR PHOTO</div></div></div>
+ <div class="pill">Swipe →</div>
+</div>
+</body></html>

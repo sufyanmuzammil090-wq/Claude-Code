@@ -56,7 +56,7 @@ reply speed, price DMs, follow-up, no-shows, reactivation, clinic branding acros
 That's the merge: **their format + Azka's full patient journey.**
 > Content gets you the opportunity. Your systems decide what happens to it.
 
-## 3. Daily mix (4 carousels from 22 Nov 2026; restart at Day 1)
+## 3. Daily mix (10 carousels/day from 22 Nov 2026 using the 10-slot rhythm in 0c; restart at Day 1)
 Scripts are discussed daily with Dr. Azka before designing. Slot 4 = Personal brand / doctor authority / Dr. Azka's story or proof.
 
 Original 3-slot mix:

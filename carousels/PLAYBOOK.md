@@ -24,6 +24,18 @@ At least 2/week are proof posts built from REAL audit findings (never invented).
   Frame it positively for practice owners. Never say "I don't recommend it for hospital doctors"; just address owners/private practice.
   Use it in an upcoming Clinic Branding slot (first candidate: Day 2), or as a slide inside a branding carousel.
 
+## 0c. Daria Medric deep-dive (added 20 Nov, from Azka's analysis)
+- **One central belief, repeated relentlessly.** Hers: expertise alone isn't enough, doctors must become recognisable.
+  Ours: *Content gets you the opportunity. Your systems decide what happens to it.*
+- **Sell the future, not the service:** "the doctor patients remember, trust and want to book".
+- **Hooks are diagnoses, not topics:** name a problem they feel but can't explain.
+- **Post formula:** Pain → Reframe → New belief → Small promise → CTA.
+- **One repeated conversion mechanism** (hers: comment/DM "KNOWN" for a challenge). We need ONE named offer + keyword used on every post.
+- **Three narratives:** (1) the doctor's brand, (2) the clinic brand = the whole patient experience, (3) the patient pathway (reply, booking, follow-up, reactivation). Never sell "AI"; sell the fix to the leak.
+- **Every script must answer at least one:** what's costing patients · what makes the doctor interchangeable · what confuses the patient · what damages trust · what slows booking · what happens after the enquiry · what isn't followed up · what could be easier (no medical advice).
+- **Rewrite rule:** service line → scene. "We provide AI systems" → "A patient asked about veneers at 9:42 PM. Who owns the reply?"
+- 10-slot daily rhythm (if volume increases): patient loss · doctor pain · specialty insight · clinic-brand lesson · patient trust · content lesson · reception/follow-up · automation outcome · contrarian belief · diagnostic question.
+
 ## 1. What the references do well
 
 | Pattern | Where seen | Why it works |
